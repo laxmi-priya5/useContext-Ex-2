@@ -1,8 +1,8 @@
 import { useState , useContext} from 'react'
-
+import Profile from './Components/Profile';
 import './App.css'
-import { CurrentUserContext } from "./currentUserContext";
-import LoginButton from './LoginButton';
+import { CurrentUserContext } from "./hooks/currentUserContext";
+import LoginButton from './Components/LoginButton';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-    <CurrentUserContext.Provider value={{ name: "Laxmipriya" }}>
+    <CurrentUserContext.Provider value={{ user , setUser }}>
       <Profile />
       <LoginButton/>
     </CurrentUserContext.Provider>
@@ -19,9 +19,6 @@ function App() {
     </>
   )
 }
-function Profile() {
-  const user = useContext(CurrentUserContext);
-  return <p>Welcome, {user.name}!</p>;
-}
+
 
 export default App
