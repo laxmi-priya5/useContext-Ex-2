@@ -1,0 +1,43 @@
+/* App.css - Simple & Light version */
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav {
+  background: white;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+main {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+p {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+  color: #444;
+}
+
+button {
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  color: white;
+  background-color: #0066cc;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0055aa;
+}
+

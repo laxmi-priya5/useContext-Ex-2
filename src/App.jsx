@@ -1,4 +1,4 @@
-import { useState , useContext} from 'react'
+import { useState , useEffect} from 'react'
 import Profile from './Components/Profile';
 import './App.css'
 import { CurrentUserContext } from "./hooks/currentUserContext";
@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     if (user) {
-      localStorage.setItem("user", JSON.stringify(user));
+      localStorage.setItem("user",JSON.stringify(user))
     } else {
       localStorage.removeItem("user");
     }
