@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState , useContext} from 'react'
 
 import './App.css'
 import { CurrentUserContext } from "./currentUserContext";
@@ -17,8 +17,8 @@ function App() {
   )
 }
 function Profile() {
-  return <p>Profile goes here</p>;
+  const user = useContext(CurrentUserContext);
+  return <p>Welcome, {user.name}!</p>;
 }
-
 
 export default App
